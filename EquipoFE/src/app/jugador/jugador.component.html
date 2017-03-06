@@ -1,3 +1,164 @@
-<p>
-  jugador works!
-</p>
+<br>
+<br>
+<h1>{{title}}</h1>
+<h2>{{error}}</h2>
+<!--{{nuevoJugador |json}}-->
+<!--Crear Jugador-->
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <form class="animated bounceIn" (ngSubmit)="crearJugador(NuevoJugadorForm)" #NuevoJugadorForm="ngForm">
+      <div class="form-group">
+        <label>Jugador</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-font"></i></span>
+          <input required
+                 name="nombre"
+                 minlength="4"
+                 type="text"
+                 id="nombre"
+                 class="form-control"
+                 placeholder="Ingrese el nombre del Jugador"
+                 #nombre="ngModel"
+                 [(ngModel)]="nuevoJugador.nombre"
+                 #nombreElm>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Fecha creación:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          <input required
+                 type="date"
+                 class="form-control"
+                 name="fechaCreacion"
+                 id="fechaCreacion"
+                 [(ngModel)]="nuevoJugador.fechaCreacion"
+                 #fechaCreacion="ngModel"
+                 #nombreElm>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Lugar recidencia:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+          <input required
+                 type="text"
+                 placeholder="lugar donde recide el Jugador"
+                 class="form-control"
+                 name="lugarRecidencia"
+                 id="lugarRecidencia"
+                 [(ngModel)]="nuevoJugador.lugarRecidencia"
+                 #lugarRecidencia="ngModel"
+                 #nombreElm>
+        </div>
+      </div>
+      <!--  <button [disabled]="disabledButtons.NuevoJugadorFormSumitButton||!NuevoJugadorForm.valid" type="submit"
+                class="btn btn-block btn-success"><span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>Crear
+        </button>-->
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <button [disabled]="disabledButtons.NuevoJugadorFormSumitButton||!NuevoJugadorForm.valid" type="submit"
+                class="btn btn-block btn-success btn-lg">
+          <span class="glyphicon glyphicon-ok"></span> Crear
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<!--Listar Jugador-->
+<h2>{{subtitle}}</h2>
+<div class="row">
+  <div class="col-sm-4" *ngFor="let Jugador of Jugadors">
+
+    <div class="col-md-7">
+      <div class="text-center ma-borde ma-padding-top-bottom">
+        <h3>{{Jugador.nombre}}</h3>
+        <p><strong>Lugar de recidencia:</strong><br>{{Jugador.lugarRecidencia}}<br>
+          <strong>Fecha de creacion:</strong><br>{{Jugador.fechaCreacion}}</p>
+        <br>
+      </div>
+      <div class="row" [hidden]="!Jugador.formularioCerrado">
+
+        <div class="col-sm-4">
+          <button class="btn btn-danger btn-group-sm" (click)="borrarJugador(Jugador.id)"><span
+            class="glyphicon glyphicon-remove"></span> Borrar
+          </button>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+          <button class="btn btn-info btn-group-sm" (click)="Jugador.formularioCerrado=!Jugador.formularioCerrado"><span
+            class="glyphicon glyphicon-refresh"></span> Actualizar
+          </button>
+        </div>
+      </div>
+      <!--Actualziar-->
+
+      <div class="row" [hidden]="Jugador.formularioCerrado">
+        <form action="">
+          <form (ngSubmit)="actualizarJugador(Jugador, Jugador.id)" #NuevaMateriaForm="ngForm">
+            <div class="row">
+              <div class="form-group">
+                <label>Jugador</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-font"></i></span>
+                  <input required
+                         name="nombre"
+                         minlength="4"
+                         type="text"
+                         class="form-control"
+                         placeholder="Ingrese el nombre del Jugador"
+                         #nombre="ngModel"
+                         [(ngModel)]="Jugador.nombre"
+                         #nombreElm>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Fecha creación:</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                  <input required
+                         type="date"
+                         class="form-control"
+                         name="fechaCreacion"
+                         [(ngModel)]="Jugador.fechaCreacion"
+                         #fechaCreacion="ngModel"
+                         #nombreElm>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Lugar recidencia:</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                  <input required
+                         type="text"
+                         placeholder="lugar donde recide el Jugador"
+                         class="form-control"
+                         name="lugarRecidencia"
+                         [(ngModel)]="Jugador.lugarRecidencia"
+                         #lugarRecidencia="ngModel"
+                         #nombreElm>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <button type="submit" class="btn btn-success btn-group-sm"><span
+                    class="glyphicon glyphicon-ok-circle"></span> Aceptar
+                  </button>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-6">
+                  <button type="button" class="btn btn-warning btn-group-sm"
+                          (click)="Jugador.formularioCerrado=!Jugador.formularioCerrado"><span
+                    class="glyphicon glyphicon-ban-circle"></span>
+                    Cancelar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

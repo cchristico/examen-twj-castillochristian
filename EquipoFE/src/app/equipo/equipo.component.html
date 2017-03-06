@@ -1,79 +1,161 @@
+<br>
+<br>
 <h1>{{title}}</h1>
 <h2>{{error}}</h2>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <pre class="animated fadeInUp">
-        {{nuevaTienda | json}}
-      </pre>
-    </div>
-    <div class="col-sm-6">
-      <form class="animated bounceIn" (ngSubmit)="crearTienda(NuevaTiendaForm)" #NuevaTiendaForm="ngForm">
-        <div class="form-group">
-          <label>Tienda</label>
+<!--{{nuevoEquipo |json}}-->
+<!--Crear Equipo-->
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <form class="animated bounceIn" (ngSubmit)="crearEquipo(NuevoEquipoForm)" #NuevoEquipoForm="ngForm">
+      <div class="form-group">
+        <label>Equipo</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-font"></i></span>
           <input required
+                 name="nombre"
                  minlength="4"
                  type="text"
+                 id="nombre"
                  class="form-control"
-                 placeholder="Digite un nombre de tienda como: Adidas"
-                 name="nombre"
-                 [(ngModel)]="nuevaTienda.nombre"
+                 placeholder="Ingrese el nombre del equipo"
                  #nombre="ngModel"
+                 [(ngModel)]="nuevoEquipo.nombre"
                  #nombreElm>
         </div>
-        <button [disabled]="disabledButtons.NuevaTiendaFormSubmitButton||!NuevaTiendaForm.valid" type="submit"
-                class="btn btn-block btn-success">Crear
+      </div>
+      <div class="form-group">
+        <label>Fecha creación:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          <input required
+                 type="date"
+                 class="form-control"
+                 name="fechaCreacion"
+                 id="fechaCreacion"
+                 [(ngModel)]="nuevoEquipo.fechaCreacion"
+                 #fechaCreacion="ngModel"
+                 #nombreElm>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Lugar recidencia:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+          <input required
+                 type="text"
+                 placeholder="lugar donde recide el equipo"
+                 class="form-control"
+                 name="lugarRecidencia"
+                 id="lugarRecidencia"
+                 [(ngModel)]="nuevoEquipo.lugarRecidencia"
+                 #lugarRecidencia="ngModel"
+                 #nombreElm>
+        </div>
+      </div>
+      <!--  <button [disabled]="disabledButtons.NuevoEquipoFormSumitButton||!NuevoEquipoForm.valid" type="submit"
+                class="btn btn-block btn-success"><span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>Crear
+        </button>-->
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <button [disabled]="disabledButtons.NuevoEquipoFormSumitButton||!NuevoEquipoForm.valid" type="submit"
+                class="btn btn-block btn-success btn-lg">
+          <span class="glyphicon glyphicon-ok"></span> Crear
         </button>
-      </form>
-    </div>
-    <div class="col-sm-6">
-      <h1>{{nuevaTienda.nombre}}</h1>
-    </div>
+      </div>
+    </form>
   </div>
-  <div class="row">
-    <div class="col-sm-12 animated flipInX" *ngFor="let tienda of tiendas">
-      <div class="text-center">
-        <h3>{{tienda.nombre}}</h3>
-        <p>ID: {{tienda.id}}</p>
+</div>
+<!--Listar Equipo-->
+<h2>{{subtitle}}</h2>
+<div class="row">
+  <div class="col-sm-4 animated fadeIn" *ngFor="let equipo of equipos">
+
+    <div class="col-md-7">
+      <div class="text-center ma-borde ma-padding-top-bottom">
+        <h3>{{equipo.nombre}}</h3>
+        <p><strong>Lugar de recidencia:</strong><br>{{equipo.lugarRecidencia}}<br>
+          <strong>Fecha de creacion:</strong><br>{{equipo.fechaCreacion}}</p>
+        <br>
       </div>
-      <div class="row animated flipInY" [hidden]="!tienda.formularioCerrado">
-        <div class="col-sm-5">
-          <button class="btn btn-block btn-info"
-                  (click)="tienda.formularioCerrado = !tienda.formularioCerrado"
-          >Actualizar</button>
+      <div class="row" [hidden]="!equipo.formularioCerrado">
+
+        <div class="col-sm-4">
+          <button class="btn btn-danger btn-group-sm" (click)="borrarEquipo(equipo.id)"><span
+            class="glyphicon glyphicon-remove"></span> Borrar
+          </button>
         </div>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-5">
-          <button class="btn btn-block btn-danger" (click)="borrarTienda(tienda.id)">Borrar</button>
-        </div>
-        <div class="col-sm-12">
-          <a [routerLink]="[tienda.id,'producto']">Ir a Productos</a>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+          <button class="btn btn-info btn-group-sm" (click)="equipo.formularioCerrado=!equipo.formularioCerrado"><span
+            class="glyphicon glyphicon-refresh"></span> Actualizar
+          </button>
         </div>
       </div>
-      <div class="div" [hidden]="tienda.formularioCerrado">
+      <!--Actualziar-->
+
+      <div class="row" [hidden]="equipo.formularioCerrado">
         <form action="">
-          <form class="animated bounceIn" (ngSubmit)="actualizarTienda(tienda)" #NuevaTiendaForm="ngForm">
-            <div class="form-group">
-              <label>Tienda</label>
-              <input required
-                     minlength="4"
-                     type="text"
-                     class="form-control"
-                     placeholder="Digite un nombre de tienda como: Adidas"
-                     name="nombre"
-                     [(ngModel)]="tienda.nombre"
-                     #nombre="ngModel"
-                     #nombreElm>
+          <form (ngSubmit)="actualizarEquipo(equipo, equipo.id)" #NuevaMateriaForm="ngForm">
+            <div class="row">
+              <div class="form-group">
+                <label>Equipo</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-font"></i></span>
+                  <input required
+                         name="nombre"
+                         minlength="4"
+                         type="text"
+                         class="form-control"
+                         placeholder="Ingrese el nombre del equipo"
+                         #nombre="ngModel"
+                         [(ngModel)]="equipo.nombre"
+                         #nombreElm>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Fecha creación:</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                  <input required
+                         type="date"
+                         class="form-control"
+                         name="fechaCreacion"
+                         [(ngModel)]="equipo.fechaCreacion"
+                         #fechaCreacion="ngModel"
+                         #nombreElm>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Lugar recidencia:</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                  <input required
+                         type="text"
+                         placeholder="lugar donde recide el equipo"
+                         class="form-control"
+                         name="lugarRecidencia"
+                         [(ngModel)]="equipo.lugarRecidencia"
+                         #lugarRecidencia="ngModel"
+                         #nombreElm>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <button type="submit" class="btn btn-success btn-group-sm"><span
+                    class="glyphicon glyphicon-ok-circle"></span> Aceptar
+                  </button>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-6">
+                  <button type="button" class="btn btn-warning btn-group-sm"
+                          (click)="equipo.formularioCerrado=!equipo.formularioCerrado"><span
+                    class="glyphicon glyphicon-ban-circle"></span>
+                    Cancelar
+                  </button>
+                </div>
+              </div>
             </div>
-            <button [disabled]="disabledButtons.NuevaTiendaFormSubmitButton||!NuevaTiendaForm.valid" type="submit"
-                    class="btn btn-block btn-success">Update
-            </button>
-            <button type="button"
-                    class="btn btn-block btn-warning"
-                    (click)="tienda.formularioCerrado = !tienda.formularioCerrado"
-            >
-              Cancelar
-            </button>
           </form>
         </form>
       </div>
