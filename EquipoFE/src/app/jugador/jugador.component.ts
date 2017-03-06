@@ -13,6 +13,10 @@ export class JugadorComponent implements OnInit {
   subtitle: string="Listado de jugadores";
   nuevoJugador= {};
   jugadores = [];
+  posiciones=[
+    'Arquero','Defensor Central','Defensor lateral','Carrilero','Defensor de medio campo','Mediocampista defensivo','Mediocampista Central',    'Mediocampista externo','Mediocampista ofensivo','Lateral volante',
+    'Volante de contención','Volante de corte','Volante de salida','Volante por la banda','Volante mixto','Volante de enganche lateral','Volante de creación','Volante con llegada','Media punta derecha','Segundo delantero izquierdo','Centro punta grueso','Puntero','Extremo lateral','Delantero centro'];
+  equipos= [];
   disabledButtons = {
     nuevoJugadorFormSumitButton: false
 };
@@ -34,7 +38,20 @@ export class JugadorComponent implements OnInit {
         (err) => {
           console.log(err);
         }
-      )
+      );
+    this._http.get(this._masterURL.url + "Equipo")
+      .subscribe(
+        (res: Response) => {
+          this.equipos = res.json()
+            .map((value) => {
+              value.formularioCerrado = true;
+              return value;
+            });
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
   }
 
   crearJugador(formulario: NgForm) {
@@ -43,7 +60,8 @@ export class JugadorComponent implements OnInit {
     this._http.post(this._masterURL.url + "Jugador", {
       nombre: formulario.value.nombre,
       fichadoHasta: formulario.value.fichadoHasta,
-      posicion: formulario.value.posicion
+      posicion: formulario.value.posicion,
+      idEquipo: formulario.value.idEquipo
     }).subscribe(
       (res) => {
         console.log("No existieron errores");
@@ -88,5 +106,8 @@ export class JugadorComponent implements OnInit {
         console.log("Error: ", err);
       }
     );
+  }
+  llenarCMBEquipos(){
+
   }
 }
