@@ -128,7 +128,4 @@ export class JugadorComponent implements OnInit {
       }
     );
   }
-  llenarCMBEquipos(){
-
-  }
 }

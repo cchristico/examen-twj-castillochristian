@@ -59,7 +59,34 @@ export class ListarComponent implements OnInit {
   equipos= [];
   constructor(private _http:Http,
   private _masterURL:MasterURLService) { }
+  borrarJugador(id:number){
+    this._http.delete(this._masterURL.url+'Jugador/'+id).subscribe(
+      (res)=>{
+        let grupoBorrado=res.json();
+        this.jugadores=this.jugadores.filter(value=>grupoBorrado.id!=value.id);
+      },
+      (err)=>{
+        console.log(err);
+      }
+    );
+  }
+  actualizarJugador(Jugador:any, id:number){
+    let parametros={
+      nombre:Jugador.nombre,
+      fichadoHasta: Jugador.fichadoHasta,
+      posicion: Jugador.posicion
 
+    };
+    this._http.put(this._masterURL.url+"Jugador/"+id,parametros).subscribe(
+      (res:Response)=>{
+        Jugador.formularioCerrado=!Jugador.formularioCerrado;
+        console.log("Respuesta:",res.json());
+      },
+      (err) => {
+        console.log("Error: ", err);
+      }
+    );
+  }
   ngOnInit() {
     this._http.get(this._masterURL.url + "Equipo")
       .subscribe(
