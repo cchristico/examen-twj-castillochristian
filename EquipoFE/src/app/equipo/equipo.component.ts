@@ -10,7 +10,7 @@ import {NgForm} from "@angular/forms";
 })
 export class EquipoComponent implements OnInit {
   title: string = "Federacón Deportiva Cebollitas F.D.C.";
-  subtitle: string="Listado de Equipos"
+  subtitle: string="Listado de Equipos";
  nuevoEquipo= {};
   equipos = [];
   disabledButtons = {
