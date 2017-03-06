@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64e06cc6-2ab5-4531-aec4-775b93b1fee2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EquipoFE/src/app/app.component.html" afterPath="$PROJECT_DIR$/EquipoFE/src/app/app.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EquipoFE/src/app/app.module.ts" afterPath="$PROJECT_DIR$/EquipoFE/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EquipoFE/src/app/app.routes.ts" afterPath="$PROJECT_DIR$/EquipoFE/src/app/app.routes.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.html" afterPath="$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.ts" afterPath="$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.ts" />
     </list>
@@ -24,8 +26,8 @@
       <file leaf-file-name="equipo.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/equipo/equipo.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state relative-caret-position="-374">
+              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding>
                 <element signature="n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#input#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="false" />
@@ -34,11 +36,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/app.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listar.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/equipo/listar/listar.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="jugador.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="87" column="12" lean-forward="true" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+            <state relative-caret-position="222">
+              <caret line="72" column="43" lean-forward="false" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -48,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/equipo/equipo.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="16" column="37" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="16" selection-end-column="37" />
+              <caret line="16" column="37" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="16" selection-end-column="37" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -56,24 +78,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jugador.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jugador.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="17" column="282" lean-forward="false" selection-start-line="17" selection-start-column="282" selection-end-line="17" selection-end-column="282" />
+            <state relative-caret-position="111">
+              <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="38" selection-end-column="35" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#532#1412#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animate.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EquipoFE/src/assets/css/animate.css">
+      <file leaf-file-name="listar.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/equipo/listar/listar.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="315">
+              <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#352#1232#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,15 +155,17 @@
         <option value="$PROJECT_DIR$/EquipoFE/src/app/services/master-url.service.ts" />
         <option value="$PROJECT_DIR$/EquipoFE/src/app/app.route.ts" />
         <option value="$PROJECT_DIR$/EquipoFE/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/EquipoFE/src/app/app.routes.ts" />
         <option value="$PROJECT_DIR$/EquipoFE/src/index.html" />
         <option value="$PROJECT_DIR$/Equipo/config/cors.js" />
         <option value="$PROJECT_DIR$/EquipoFE/src/app/home/home.component.html" />
-        <option value="$PROJECT_DIR$/EquipoFE/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/EquipoFE/src/app/equipo/equipo.component.html" />
         <option value="$PROJECT_DIR$/EquipoFE/src/app/equipo/equipo.component.ts" />
         <option value="$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.html" />
+        <option value="$PROJECT_DIR$/EquipoFE/src/app/app.routes.ts" />
+        <option value="$PROJECT_DIR$/EquipoFE/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.ts" />
+        <option value="$PROJECT_DIR$/EquipoFE/src/app/equipo/listar/listar.component.html" />
+        <option value="$PROJECT_DIR$/EquipoFE/src/app/equipo/listar/listar.component.ts" />
       </list>
     </option>
   </component>
@@ -302,6 +330,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="EquipoFE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="equipo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examen-twj-castillochristian" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examen-twj-castillochristian" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Equipo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -442,12 +500,12 @@
       <option name="presentableId" value="Default" />
       <updated>1488661102577</updated>
       <workItem from="1488661108908" duration="13440000" />
-      <workItem from="1488740389710" duration="27032000" />
+      <workItem from="1488740389710" duration="35363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40472000" />
+    <option name="totallyTimeSpent" value="48803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -579,7 +637,7 @@
           <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding>
             <element signature="e#0#53#0" expanded="false" />
-            <element signature="e#282#328#0" expanded="false" />
+            <element signature="e#348#394#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -595,6 +653,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1295">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -671,17 +730,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/app.route.ts" />
-    <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#53#0" expanded="false" />
-            <element signature="e#282#328#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -736,40 +784,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/home/home.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="5" column="34" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#header#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#header#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#header#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EquipoFE/src/assets/css/animate.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-688">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EquipoFE/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -784,8 +802,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/equipo/equipo.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        <state relative-caret-position="-374">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#input#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="false" />
@@ -796,7 +814,7 @@
     <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/equipo/equipo.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="16" selection-end-column="37" />
+          <caret line="16" column="37" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="16" selection-end-column="37" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -811,20 +829,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#header#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EquipoFE/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="e#348#394#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="87" column="12" lean-forward="true" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+        <state relative-caret-position="222">
+          <caret line="72" column="43" lean-forward="false" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/jugador/jugador.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="17" column="282" lean-forward="false" selection-start-line="17" selection-start-column="282" selection-end-line="17" selection-end-column="282" />
+        <state relative-caret-position="111">
+          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="38" selection-end-column="35" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#532#1412#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/equipo/listar/listar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EquipoFE/src/app/equipo/listar/listar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#352#1232#0" expanded="false" />
           </folding>
         </state>
       </provider>

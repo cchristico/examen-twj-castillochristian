@@ -13,9 +13,30 @@ export class JugadorComponent implements OnInit {
   subtitle: string="Listado de jugadores";
   nuevoJugador= {};
   jugadores = [];
-  posiciones=[
-    'Arquero','Defensor Central','Defensor lateral','Carrilero','Defensor de medio campo','Mediocampista defensivo','Mediocampista Central',    'Mediocampista externo','Mediocampista ofensivo','Lateral volante',
-    'Volante de contención','Volante de corte','Volante de salida','Volante por la banda','Volante mixto','Volante de enganche lateral','Volante de creación','Volante con llegada','Media punta derecha','Segundo delantero izquierdo','Centro punta grueso','Puntero','Extremo lateral','Delantero centro'];
+  posiciones=[{posicion:"Arquero"},
+    {posicion:"Defensor Central"},
+    {posicion:"Defensor lateral"},
+    {posicion:"Carrilero"},
+    {posicion:"Defensor de medio campo"},
+    {posicion:"Mediocampista defensivo"},
+    {posicion:"Mediocampista Central"},
+    {posicion:"Mediocampista externo"},
+    {posicion:"Mediocampista ofensivo"},
+    {posicion:"Lateral volante"},
+    {posicion:"Volante de contención"},
+    {posicion:"Volante de corte"},
+    {posicion:"Volante de salida"},
+    {posicion:"Volante por la banda"},
+    {posicion:"Volante mixto"},
+    {posicion:"Volante de enganche lateral"},
+    {posicion:"Volante de creación"},
+    {posicion:"Volante con llegada"},
+    {posicion:"Media punta derecha"},
+    {posicion:"Segundo delantero izquierdo"},
+    {posicion:"Centro punta grueso"},
+    {posicion:"Puntero"},
+    {posicion:"Extremo lateral"},
+    {posicion:"Delantero centro"}];
   equipos= [];
   disabledButtons = {
     nuevoJugadorFormSumitButton: false

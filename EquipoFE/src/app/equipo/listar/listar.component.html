@@ -1,91 +1,20 @@
 <br>
 <br>
-<h1>{{title}}</h1>
-<h2>{{error}}</h2>
-<!--Crear Jugador-->
+<br>
+<h2>{{title}}</h2>
 <div class="row">
   <div class="col-sm-3"></div>
-  <div class="col-sm-6">
-    <form class="animated bounceIn" (ngSubmit)="crearJugador(NuevoJugadorForm)" #NuevoJugadorForm="ngForm">
-      <div class="form-group">
-        <label>Jugador</label>
-        <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input required
-                 name="nombre"
-                 minlength="4"
-                 type="text"
-                 id="nombre"
-                 class="form-control"
-                 placeholder="Ingrese el nombre del Jugador"
-                 #nombre="ngModel"
-                 [(ngModel)]="nuevoJugador.nombre"
-                 #nombreElm>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Fichado hasta:</label>
-        <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-
-          <input required
-                 type="date"
-                 class="form-control"
-                 name="fichadoHasta"
-                 id="fichadoHasta"
-                 [(ngModel)]="nuevoJugador.fichadoHasta"
-                 #fichadoHasta="ngModel"
-                 #nombreElm>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Posición:</label>
-        <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-screenshot"></i></span>
-          <select required
-                  class="form-control"
-                  name="posicion"
-                  id="posicion"
-                  [(ngModel)]="nuevoJugador.posicion"
-                  #posicion="ngModel">
-            <option *ngFor="let poscion of posiciones" value="{{poscion.posicion}}">{{poscion.posicion}}</option>
-          </select>
-        <!--  <input required
-                 type="text"
-                 placeholder="posicion del jugador"
-                 class="form-control"
-                  name="posicion"
-                  id="posicion"
-                  [(ngModel)]="nuevoJugador.posicion"
-                 #nombreElm>-->
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Equipo:</label>
-        <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-flag"></i></span>
-        <select required
-        class="form-control"
-        name="idEquipo"
-                id="idEquipo"
-                [(ngModel)]="nuevoJugador.idEquipo"
-                #idEquipo="ngModel">
-          <option *ngFor="let equipo of equipos" value="{{equipo.id}}>{{equipo.nombre}}">{{equipo.nombre}}</option>
-        </select>
-        </div>
-      </div>
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <button [disabled]="disabledButtons.NuevoJugadorFormSumitButton||!NuevoJugadorForm.valid" type="submit"
-                class="btn btn-block btn-success btn-lg">
-          <span class="glyphicon glyphicon-ok"></span> Crear
-        </button>
-      </div>
-    </form>
+<div class="form-group col-sm-6">
+    <label>Seleccione el <strong>Equipo</strong>:</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-flag"></i></span>
+    <select class="form-control" [ngModel]="selectedDevice" (ngModelChange)="onChange($event)">
+      <option *ngFor="let equipo of equipos" value="{{equipo.id}}"  >{{equipo.nombre}}</option>
+    </select>
+</div>
+    <!--<button (focus)="open($event,22)"> hola</button>-->
   </div>
 </div>
-<!--Listar Jugador-->
-<h2>{{subtitle}}</h2>
 <div class="row">
   <div class="col-sm-4" *ngFor="let Jugador of jugadores">
 

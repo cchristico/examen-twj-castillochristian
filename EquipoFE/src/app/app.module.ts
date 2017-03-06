@@ -9,13 +9,15 @@ import { JugadorComponent } from './jugador/jugador.component';
 import {routing} from "./app.routes";
 import {MasterURLService} from "./services/master-url.service";
 import { HomeComponent } from './home/home.component';
+import { ListarComponent } from './equipo/listar/listar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EquipoComponent,
     JugadorComponent,
-    HomeComponent
+    HomeComponent,
+    ListarComponent
   ],
   imports: [
     BrowserModule,
